@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22222" systemVersion="22G91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="OnTimeCD" representedClassName="OnTimeCD" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="schedule" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ScheduleCD"/>
+    </entity>
+    <entity name="ScheduleCD" representedClassName="ScheduleCD" syncable="YES">
+        <attribute name="fri" optional="YES" attributeType="String"/>
+        <attribute name="mon" optional="YES" attributeType="String"/>
+        <attribute name="sat" optional="YES" attributeType="String"/>
+        <attribute name="sun" optional="YES" attributeType="String"/>
+        <attribute name="thu" optional="YES" attributeType="String"/>
+        <attribute name="tue" optional="YES" attributeType="String"/>
+        <attribute name="wed" optional="YES" attributeType="String"/>
+        <relationship name="onTime" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OnTimeCD"/>
+    </entity>
+</model>
